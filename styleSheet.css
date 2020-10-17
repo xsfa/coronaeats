@@ -16,6 +16,13 @@ main {
     overflow-y: scroll;
     height: 100vh;
 }
+logo {
+    TOP:35px;LEFT:170px;
+    width:100%;
+    text-align:center;
+    display:inline-block;
+    margin: 0 auto;
+}
 nav {
     top: 0;
     position: fixed;
