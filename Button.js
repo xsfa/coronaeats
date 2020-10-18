@@ -1,38 +1,21 @@
-const parse = require('csv-parse');
 const fs = new require('fs');
 const path = require('path');
-const coolPath = path.join(__dirname, 'urls.csv');
-const url = [];
+const Path = path.join(__dirname, 'urls.txt');
 /*
-// 1. Create the button
 var button = document.createElement("button");
 button.innerHTML = "Do Something";
 
-// 2. Append somewhere
 var body = document.getElementsByTagName("body")[0];
 body.appendChild(button);
 
-// 3. Add event handler
 button.addEventListener ("click", function() {
-  alert("did something");
+  alert("this");
 });
 */
-fs.createReadStream(coolPath)
-  .pipe(
-    parse({
-      relax_column_count: true,
-      skip_lines_with_error: true,
-      delimiter: ',,,,,,,,'
-    })
-  )
-  .on('data', function(dataRow) {
-    url.push(dataRow)
-  })
+var text = fs.readFileSync("./urls.txt").toString('utf-8');
+var textByLine = text.split(",")
 
-  .on('end', function() {
-    console.log(url);
-  })
-
+console.log(textByLine);
 /* <script type="text/javascript">
 
     function getAsText()
