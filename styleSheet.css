@@ -15,6 +15,11 @@ main {
     overflow-y: scroll;
     height: 100vh;
 }
+.random {
+    background: #D8D8D8;
+    border: 1px solid #979797;
+    border-radius: 36px;
+}
 logo {
     TOP:100px;LEFT:170px;
     width:100%;
@@ -34,17 +39,7 @@ logo {
     margin-left: auto;
     margin-right: auto;
   }
-nav {
-    top: 0;
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    background-color: #bababa;
-    /* opacity: 0.85; */
-}
+
 #mapSpace {
     width: 600px;
     height: 450px;
