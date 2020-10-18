@@ -2356,7 +2356,7 @@
     "https://bizremix.com/kitchen-remix", 
     "sushikudasai.com"];
     var value = arr[Math.floor(Math.random() * arr.length)];
-    alert("Going to: " + value);
+    //alert("Going to: " + value);
     window.location = value;
 }
 

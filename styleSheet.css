@@ -6,7 +6,6 @@
 }
 body {
     background: #D57070;
-    border: 1px solid #FFFFFF;
 }
 main {
     font-size: 24px;
@@ -16,11 +15,24 @@ main {
     height: 100vh;
 }
 .random {
-    background: #D8D8D8;
-    border: 1px solid #979797;
+    padding-top: 75px;
+    padding-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 890px;
+    border: none;
+    background-color: #ffffff;
+    padding: 14px 28px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
     border-radius: 36px;
 }
 logo {
+    padding-top: 50px;
+    padding-bottom: 50px;
     TOP:100px;LEFT:170px;
     width:100%;
     text-align:center;
@@ -39,6 +51,14 @@ logo {
     margin-left: auto;
     margin-right: auto;
   }
+
+.h2 {
+    text-align: center;
+    margin:auto;
+    padding: 35px;
+    font-size: 5;
+    opacity: 55%;
+}
 
 #mapSpace {
     width: 600px;
@@ -61,16 +81,3 @@ logo {
     color: #003153;
     padding: 400px;
 }
-::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 10px grey;
-    border-radius: 20px;
-    transform-origin: 20em;
-  }
-::-webkit-scrollbar-thumb {
-    background: rgba(255,255,255, 0.5);
-    border-radius: 20px;
-  }
