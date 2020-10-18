@@ -20,6 +20,7 @@ button.addEventListener ("click", function() {
         window.location = url; // redirect
     }
 </script>
+//<a href="#" onClick="goSomewhere(); return false;">Gimme something weird!</a>
 /**
  * body {
   padding: 20px;
