@@ -1,3 +1,8 @@
+const parse = require('csv-parse');
+const fs = new require('fs');
+
+const url = [];
+/*
 // 1. Create the button
 var button = document.createElement("button");
 button.innerHTML = "Do Something";
@@ -10,10 +15,25 @@ body.appendChild(button);
 button.addEventListener ("click", function() {
   alert("did something");
 });
-<script type="text/javascript">
-    var urls = [
+*/
+fs.createReadStream(__dirname + '/Users/tesfashenkute/coronaeats/urls.csv')
+  .pipe(
+    parse({
+      delimiter: ',,,,,,,,'
+    })
+  )
+  .on('data', function(dataRow) {
+    url.push(dataRow)
+  })
 
-    ];
+  .on('end', function() {
+    console.log(url.head);
+  })
+/* <script type="text/javascript">
+
+    function getAsText()
+
+    var urls = [];
 
     function goSomewhere() {
         var url = urls[Math.floor(Math.random()*urls.length)];
