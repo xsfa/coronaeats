@@ -4,6 +4,7 @@
   "description": "API:",
   "main": "main.js",
   "dependencies": {
+    "browserify-fs": "^1.0.0",
     "csv-parse": "^4.12.0"
   },
   "devDependencies": {},
