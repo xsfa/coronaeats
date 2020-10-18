@@ -3,7 +3,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: "Arial Rounded MT Bold";
 }
 body {
     background: #D57070;
@@ -16,6 +16,7 @@ main {
     overflow-y: scroll;
     height: 100vh;
 }
+
 logo {
     TOP:35px;LEFT:170px;
     width:100%;
@@ -23,6 +24,17 @@ logo {
     display:inline-block;
     margin: 0 auto;
 }
+.corner-wrapper {
+    display: block;
+    overflow: hidden;
+    width: 890px;
+    height: 680px;
+    border-radius: 36px;
+    transform: translateZ(0px);
+    border: 3px solid #eee;
+    margin: auto;
+    width: 50%;
+  }
 nav {
     top: 0;
     position: fixed;
@@ -35,24 +47,12 @@ nav {
     /* opacity: 0.85; */
 }
 #mapSpace {
-    background: #FFFFFF;
-    border: 1px solid #000000;
+    width: 600px;
+    height: 450px;
+    text-align: center;
+    margin: auto;
+    width: 50%;
     border-radius: 36px;
-}
-.navLinks {
-    display: flex;
-    justify-content: space-around;
-    width: 40%;
-}
-.navLinks li {
-    list-style: none;
-}
-.navLinks a {
-    color:#003153;
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-size: 18px;
-    font-weight: bold;
 }
 #currentPage {
     /* color: rgb(72, 165, 134); */
@@ -68,65 +68,6 @@ nav {
     background-color: #003153;
     margin: 5px;
     transition: all 0.3s ease;
-}
-.burger {
-    display: none;
-}
-@media screen and (max-width:1024px){
-    .navLinks {
-        width: 60%;
-    }
-}
-@media screen and (max-width:768px){
-    body {
-        overflow-x: hidden;
-    }
-    .navLinks {
-        position: absolute;
-        right: 0px;
-        height: 92vh;
-        top: 8vh;
-        background-color: #bababa;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 35%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-    }
-    .navLinks li{
-        opacity: 0;
-    }
-    .burger {
-        display: block;
-        cursor: pointer;
-    }
-    
-}
-
-.navActive {
-    transform: translateX(0%);
-}
-
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translate(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translate(0px);
-    }
-}
-
-.toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-.toggle .line2 {
-    opacity: 0;
-}
-.toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 #announcement {
@@ -150,73 +91,3 @@ nav {
     background: rgba(255,255,255, 0.5);
     border-radius: 20px;
   }
-
-/* foother stuff */
-.footer {
-    /* display: inline; */
-    position: relative; 
-    overflow-y: hidden;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #bababa;
-    color: #bababa;
-    text-align: center;
-    height: 60px;
-}
-.socialMedia {
-    display: inline;
-    color: beige;
-}
-#contact {
-    float: right;
-    margin-right: 50px;
-    padding: 3px;
-    background-color: transparent;
-    color: #003153;
-    border: solid 2px #003153;
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-size: 18px;
-    font-weight: bold;
-    display: block;
-    margin-top: 15px;
-}
-
-/* The Modal (background) */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    /* background-color: rgba(0,0,0,0.4);  */
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #bababa;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 2px solid #a595df;
-    width: 30%; 
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
