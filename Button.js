@@ -1,6 +1,7 @@
 const parse = require('csv-parse');
 const fs = new require('fs');
-
+const path = require('path');
+const coolPath = path.join(__dirname, 'urls.csv');
 const url = [];
 /*
 // 1. Create the button
@@ -16,9 +17,11 @@ button.addEventListener ("click", function() {
   alert("did something");
 });
 */
-fs.createReadStream(__dirname + '/Users/tesfashenkute/coronaeats/urls.csv')
+fs.createReadStream(coolPath)
   .pipe(
     parse({
+      relax_column_count: true,
+      skip_lines_with_error: true,
       delimiter: ',,,,,,,,'
     })
   )
@@ -27,14 +30,15 @@ fs.createReadStream(__dirname + '/Users/tesfashenkute/coronaeats/urls.csv')
   })
 
   .on('end', function() {
-    console.log(url.head);
+    console.log(url);
   })
+
 /* <script type="text/javascript">
 
     function getAsText()
 
     var urls = [];
-
+    
     function goSomewhere() {
         var url = urls[Math.floor(Math.random()*urls.length)];
         window.location = url; // redirect
