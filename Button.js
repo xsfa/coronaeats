@@ -10,6 +10,16 @@ body.appendChild(button);
 button.addEventListener ("click", function() {
   alert("did something");
 });
+<script type="text/javascript">
+    var urls = [
+
+    ];
+
+    function goSomewhere() {
+        var url = urls[Math.floor(Math.random()*urls.length)];
+        window.location = url; // redirect
+    }
+</script>
 /**
  * body {
   padding: 20px;
